@@ -37,12 +37,12 @@ tour = new TourMap('map-canvas', options);
 tour.addStops(stops);
 ```
 
-In the above example, a number of the key pricinciples are demonstrated:
+In the above example, a number of the key principles are demonstrated:
 
 1. Creating the map is as simple as providing the DOM container `id` and [optionally] some options for the map.
 2. The points on the map can be given in a batch object (or individually, check the `addStop` method in the source)
 3. When creating the list of 'stops' on the map, one provides an `order` attribute so the map knows the path of travel to render, this way you don't have to fuss with copy/paste whole object blocks when the order changes. If no order is provided, they are ordered as they come.
-4. Instead of providing latitude and longitude, the location of each map marker can be asynchronously geocoded by the Google Maps API from a plaintext address. To do so, specify the `geocode` attribute of a location with a value of `true` along with an `address` text field containing the search text to use for geocoding. Since this happens asynchronously (as per the Google Maps API), it is highly recommended that you first [find the cooridnates yourself](https://support.google.com/maps/answer/18539?hl=en).
+4. Instead of providing latitude and longitude, the location of each map marker can be asynchronously geocoded by the Google Maps API from a plaintext address. To do so, specify the `geocode` attribute of a location with a value of `true` along with an `address` text field containing the search text to use for geocoding. Since this happens asynchronously (as per the Google Maps API), it is highly recommended that you first [find the coordinates yourself](https://support.google.com/maps/answer/18539?hl=en).
 
 ## Furthermore
 
