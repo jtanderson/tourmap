@@ -110,13 +110,13 @@ google.maps.event.addDomListener(window, 'load', initialize);
       tour.addStops(stops);
       </code></pre>
 
-      <p>In the above example, a number of the key pricinciples are demonstrated:</p>
+      <p>In the above example, a number of the key principles are demonstrated:</p>
 
       <ol>
         <li>Creating the map is as simple as providing the DOM container <code>id</code> and [optionally] some options for the map.</li>
         <li>The points on the map can be given in a batch object (or individually, check the <code>addStop</code> method in the source)</li>
         <li>When creating the list of &#39;stops&#39; on the map, one provides an <code>order</code> attribute so the map knows the path of travel to render, this way you don&#39;t have to fuss with copy/paste whole object blocks when the order changes. If no order is provided, they are ordered as they come.</li>
-        <li>Instead of providing latitude and longitude, the location of each map marker can be asynchronously geocoded by the Google Maps API from a plaintext address. To do so, specify the <code>geocode</code> attribute of a location with a value of <code>true</code> along with an <code>address</code> text field containing the search text to use for geocoding. Since this happens asynchronously (as per the Google Maps API), it is highly recommended that you first <a href="https://support.google.com/maps/answer/18539?hl=en">find the cooridnates yourself</a>.</li>
+        <li>Instead of providing latitude and longitude, the location of each map marker can be asynchronously geocoded by the Google Maps API from a plaintext address. To do so, specify the <code>geocode</code> attribute of a location with a value of <code>true</code> along with an <code>address</code> text field containing the search text to use for geocoding. Since this happens asynchronously (as per the Google Maps API), it is highly recommended that you first <a href="https://support.google.com/maps/answer/18539?hl=en">find the coordinates yourself</a>.</li>
       </ol>
 
       <h2>Furthermore</h2>
