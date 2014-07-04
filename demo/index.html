@@ -22,13 +22,11 @@ html { height: 100% }
 </script><script type="text/javascript">
 var tour = {};
   function initialize() {
-        var mapOptions = {
+        var options = {
           center: new google.maps.LatLng(-34.397, 150.644),
-          zoom: 8
+          zoom: 8,
+          strokeColor: '#0000FF'
         };
-        var map = new google.maps.Map(document.getElementById("map-canvas"),
-            mapOptions);
-        var tourOptions = {};
         var stops = [
           {
             lat: -25.363882,
@@ -49,7 +47,7 @@ var tour = {};
             date: '07/17/2014',
             order: 3
           }];
-        tour = new TourMap(map, tourOptions);
+        tour = new TourMap('map-canvas', options);
         tour.addStops(stops);
   }
   google.maps.event.addDomListener(window, 'load', initialize);
