@@ -8,30 +8,31 @@ Enough talk! Let's see some code (in action [here](http://jtanderson.github.com/
 
 ```javascript
 var options = {
-center: new google.maps.LatLng(-34.397, 150.644),
-        zoom: 8,
-        strokeColor: '#0000FF'
+  center: new google.maps.LatLng(-34.397, 150.644),
+  zoom: 8,
+  strokeColor: '#0000FF'
 };
 var stops = [
-{
-lat: -25.363882,
-       lng: 131.044922,
-       title: "My Marker",
-       date: '07/14/2014',
-       order: 1
-},
-{
-lat: -34.397,
-     lng: 150.644,
-     date: '07/15/2014',
-     order: 2
-},
-{
-address: 'Falkirk Folk Club, Falkirk Scotland',
-         geocode: true,
-         date: '07/17/2014',
-         order: 3
-}];
+  {
+    lat: -25.363882,
+    lng: 131.044922,
+    title: "My Marker",
+    date: '07/14/2014',
+    order: 1
+  },
+  {
+    lat: -34.397,
+    lng: 150.644,
+    date: '07/15/2014',
+    order: 2
+  },
+  {
+    address: 'Falkirk Folk Club, Falkirk Scotland',
+    geocode: true,
+    date: '07/17/2014',
+    order: 3
+  }
+];
 tour = new TourMap('map-canvas', options);
 tour.addStops(stops);
 ```
