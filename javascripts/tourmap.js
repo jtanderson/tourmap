@@ -1,11 +1,12 @@
 (function () {
   var defaultOptions = {
-
+    strokeColor: '#FF0000'
   };
 
-  TourMap = function (map, options) {
+  TourMap = function (mapId, options) {
+    this.options = {};
     this.setOptions(options);
-    this.map = map;
+    this.map = new google.maps.Map(document.getElementById(mapId), this.options);
     this.stops = [];
   };
 
@@ -60,7 +61,7 @@
 
   TourMap.prototype.setOptions = function(options) {
     for ( i in defaultOptions ){
-      this[i] = i in options ? options[i] : defaultOptions[i];
+      this.options[i] = i in options ? options[i] : defaultOptions[i];
     }
   };
 
@@ -73,7 +74,7 @@
     var path = new google.maps.Polyline({
       path: coords,
       geodesic: true,
-      strokeColor: '#FF0000',
+      strokeColor: this.options.strokeColor,
       strokeOpacity: 0.8,
       strokeWeight: 2
     });
@@ -94,8 +95,9 @@
         stopObj.lng = results[0].geometry.location.lng();
         tour.addStop(stopObj);
       } else {
-        alert("Something got wrong " + status);
+        alert("Geocoding Error: " + status);
       }
     });
   }
 }());
+
